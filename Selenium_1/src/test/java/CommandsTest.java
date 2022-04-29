@@ -42,6 +42,7 @@ public class CommandsTest {
         WebElement button = driver.findElement(By.id("input-example"));
         WebElement message = driver.findElement(By.id("input-example"));
         String text = button.getText();
+
         if(!inputField.isEnabled() && !text.contains("Enable") && !message.isDisplayed()){
             System.out.println("Input field is Disabled; return " + inputField.isEnabled() + "." + "Button inner text is not changed" +
                     "  Message is not displayed" );
@@ -61,8 +62,8 @@ public class CommandsTest {
         driver.get(url);
         driver.manage().window().maximize();
 
-        int box_a = driver.findElement(By.id("columns")).getLocation().getY();
-        int box_b = driver.findElement(By.id("columns")).getLocation().getY();
+        int box_a = driver.findElement(By.id("column-a")).getLocation().getY();
+        int box_b = driver.findElement(By.id("column-b")).getLocation().getY();
 
         if(box_a == box_b){
             System.out.println("Columns Y coordinates are same");
