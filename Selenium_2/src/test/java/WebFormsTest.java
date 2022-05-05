@@ -33,7 +33,7 @@ public class WebFormsTest {
 
     @Test
     public void SelectAllInCheckbox() {
-        List<WebElement> checkboxes = driver.findElements(By.xpath("/html/body/div/div[3]/div/div"));
+        List<WebElement> checkboxes = driver.findElements(By.cssSelector("input[type='checkbox']"));
         for(int i = 0; i < checkboxes.size(); i++) {
             if(!checkboxes.get(i).isSelected()){
                 checkboxes.get(i).click();
